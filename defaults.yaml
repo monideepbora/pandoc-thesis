@@ -1,0 +1,39 @@
+from: markdown+lists_without_preceding_blankline
+to: pdf
+
+output-file: thesis.pdf
+input-files:
+- md/introduction.md
+- md/relatedwork.md
+- md/concept.md
+- md/realisation.md
+- md/conclusion.md
+- references.md
+- md/appendix.md
+
+metadata-file: md/metadata.yaml
+metadata:
+  lang: de-DE
+  link-citations: true
+
+citeproc: true
+bibliography:
+- references.bib
+
+strip-comments: true
+wrap: preserve
+standalone: true
+listings: true
+
+table-of-contents: true
+toc-depth: 3
+number-sections: true
+
+pdf-engine: pdflatex
+pdf-engine-opt: '-shell-escape'
+variables:
+  documentclass: scrartcl
+#  documentclass: scrreprt
+  papersize: a4
+  colorlinks: true
+

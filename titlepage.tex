@@ -5,12 +5,12 @@
 
 \parindent=0pt
 \begin{center}
-    \Large
-    \textsc{
-        Fachhochschule Bielefeld\\
-        Fachbereich Campus Minden\\
-        \vspace{\baselineskip}\noindent
-        Studiengang Informatik
+%    \includegraphics[width=5cm]{icons/uni_siegel}\\
+    \includegraphics[width=12cm]{icons/unilogo}\\
+    \vspace{0.25cm}
+    \Large{
+    Department of Computer Science (IIF)\\
+    Chair of Computer Architecture\\
     }
 \end{center}
 
@@ -39,13 +39,13 @@ $endif$
 \vspace{\baselineskip}\noindent
 \large
 \begin{tabular}{lp{\textwidth}}
-    vorgelegt von: & \texttt{$for(author)$$author$$sep$ \and $endfor$}\\
-    Matrikelnummer: & \texttt{$studentnumber$} \\
+    Thesis of: & \texttt{$for(author)$$author$$sep$ \and $endfor$}\\
+    Matriculation number: & \texttt{$studentnumber$} \\
     &\\[12pt]
-    Abgabe am: & \texttt{$date$}\\
+    Submission on: & \texttt{$date$}\\
     &\\[24pt]
-    Erstprüfer/in: & \texttt{$reviewer1$}\\
-    Zweitprüfer/in: & \texttt{$reviewer2$}
+    First examiner: & \texttt{$reviewer1$}\\
+    Second examiner: & \texttt{$reviewer2$}
 \end{tabular}
 }
 %------------------------------------- Custom Title Page ---------------------------
@@ -57,11 +57,23 @@ $endif$
 \thispagestyle{empty}
 \hfill
 \vfill
-\textbf{$author$} ($studentnumber$) \\
-\textit{$title$} \\
-$date$ \\[12pt]
-Erstprüfer/in: $reviewer1$ \\
-Zweitprüfer/in: $reviewer2$
+%\textbf{$author$} ($studentnumber$) \\
+%\textit{$title$} \\
+%$date$ \\[12pt]
+\begin{tabular}{lp{\textwidth}}
+    First examiner: & \texttt{$reviewer1$}\\
+    &\\[5pt]
+    Second examiner: & \texttt{$reviewer2$}\\
+    &\\[10pt]
+    Advisers:& \texttt{$adviser1$} \\
+        & \texttt{$adviser2$} \\
+        &\\[5pt]
+        & \texttt{$adviser3$} \\
+        & \texttt{$adviser4$} \\
+        &\\[10pt]
+Writing Period:& \texttt{01.02.2022 - 30.04.2022}
+
+\end{tabular}
 }
 %------------------------------------- Custom Title (Back) Page --------------------
 

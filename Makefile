@@ -55,7 +55,7 @@ TMP                     = $(TMP1) $(TMP2) $(TMP3)
 
 
 ## Pandoc options
-AUX_OPTS                = --wrap=preserve
+AUX_OPTS                = --wrap=preserve -M simple=true
 
 OPTIONS                 = -f markdown
 OPTIONS                += --pdf-engine=pdflatex
@@ -132,7 +132,11 @@ TEMPLATE_FILES          = $(EISVOGEL_TEMPLATE) $(CLEANTHESIS_TEMPLATE)
 
 ## Simple book layout
 simple: $(TARGET)
+#		cmd.exe /C taskkill /IM "FoxitReader.exe" /F
+		cmd.exe /C start thesis.pdf
 
+exit:
+	cmd.exe /C taskkill /IM "FoxitReader.exe" /F
 
 ## Use Eisvogel template (https://github.com/Wandmalfarbe/pandoc-latex-template)
 eisvogel: TEMPLATE_FILE    += $(EISVOGEL_TEMPLATE)

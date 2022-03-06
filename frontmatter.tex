@@ -4,26 +4,57 @@ $if(cleanthesis)$
 \clearpage
 \customtitlebackpage
 $endif$
+
+$if(simple)$
+\clearpage
+\customtitlebackpage
+$endif$
 %------------------------------------- Custom Title (Back) Page --------------------
+
+%------------------------------------- Declaration Page ----------------------------
+$if(declaration)$
+\chapter*{Declaration}
+
+\thispagestyle{empty}
+
+\vspace{2cm}
+
+$declaration$
+
+\vspace{2cm}
+
+\makeatletter
+
+\noindent ($author$)
+
+Neubiberg, $date$
+
+\makeatother
+
+$endif$
+
+%------------------------------------- Declaration Page ----------------------------
+
 
 
 
 %------------------------------------- Custom Abstract Page ------------------------
 $if(abstract-de)$
-\cleardoublepage
-\begin{minipage}{\linewidth}
+%\cleardoublepage
+%\begin{minipage}{\linewidth}
 
 \chapter*{Zusammenfassung}
+\thispagestyle{empty}
+\vspace{2cm}
 %\addcontentsline{toc}{chapter}{Zusammenfassung}
 $abstract-de$
-
 $if(abstract-en)$
 \chapter*{Abstract}
 %\addcontentsline{toc}{chapter}{Abstract}
 $abstract-en$
 $endif$
 
-\end{minipage}
+%\end{minipage}
 \cleardoublepage
 $endif$
 %------------------------------------- Custom Abstract Page ------------------------
@@ -32,7 +63,7 @@ $endif$
 
 %------------------------------------- Acknowledgements Page -----------------------
 $if(acknowledgements)$
-\chapter*{Danksagung}
+\chapter*{Acknowledgements}
 %\addcontentsline{toc}{chapter}{Danksagung}
 $acknowledgements$
 $endif$
@@ -41,10 +72,10 @@ $endif$
 
 
 %------------------------------------- Restriction Note Page -----------------------
-$if(restrictionnote)$
-\chapter*{Sperrvermerk}
-$restrictionnote$
-$endif$
+% $if(restric)$
+% \chapter*{Declaration}
+% $declaration$
+% $endif$
 %------------------------------------- Restriction Note Page -----------------------
 
 
